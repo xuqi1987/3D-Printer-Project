@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "QBoat-Joy"
+		},
+		{
+			"name": "BoatControl",
+			"path": "BoatControl"
+		}
+	],
+	"settings": {}
+}
