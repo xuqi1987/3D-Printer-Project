@@ -209,6 +209,8 @@ void setup()
 void loop()
 {
     AliyunIoTSDK::loop();
+    AliyunIoTSDK::send("MotionAlarmState",0);
+    delay(1000);
 }
 
 

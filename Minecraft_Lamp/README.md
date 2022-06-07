@@ -73,3 +73,17 @@
 3. 写一个简单的程序，实现控制灯
 
 ### 设置配网(连接wifi自动打开网页captive Portal)
+
+```c++
+    WiFiManager wifiManager;  
+    wifiManager.setConfigPortalTimeout(WIFI_TIMEOUT);
+    if (!wifiManager.autoConnect("AutoConnectAP")) 
+    {
+        Serial.println("failed to connect and hit timeout");
+        delay(3000);
+        //reset and try again, or maybe put it to deep sleep
+        ESP.restart();
+        delay(5000);
+    }
+```
+
