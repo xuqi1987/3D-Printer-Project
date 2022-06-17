@@ -1,5 +1,17 @@
 {
-	"folders": [],
+	"folders": [
+		{
+			"name": "Night_Lamp",
+			"path": "Night_Lamp"
+		},
+		{
+			"path": "Minecraft_Lamp"
+		},
+		{
+			"name": "AutoLockPC",
+			"path": "AutoLockPC"
+		}
+	],
 	"settings": {
 		"files.associations": {
 			"array": "cpp",
@@ -11,8 +23,7 @@
 			"ranges": "cpp",
 			"regex": "cpp",
 			"initializer_list": "cpp",
-			"utility": "cpp",
-			"condition_variable": "cpp"
+			"utility": "cpp"
 		}
 	}
 }

@@ -1,0 +1,1445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Night_Lamp"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Z_DUMMY_TARGET">
+				<Option output="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Z_DUMMY_TARGET" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORMIO=60002"/>
+					<Add option="-DESP8266"/>
+					<Add option="-DARDUINO_ARCH_ESP8266"/>
+					<Add option="-DARDUINO_ESP8266_ESP01"/>
+					<Add option="-DF_CPU=80000000L"/>
+					<Add option="-D__ets__"/>
+					<Add option="-DICACHE_FLASH"/>
+					<Add option="-DARDUINO=10805"/>
+					<Add option="-DARDUINO_BOARD=&quot;PLATFORMIO_ESP01&quot;"/>
+					<Add option="-DFLASHMODE_QIO"/>
+					<Add option="-DLWIP_OPEN_SRC"/>
+					<Add option="-DNONOSDK22x_190703=1"/>
+					<Add option="-DTCP_MSS=536"/>
+					<Add option="-DLWIP_FEATURES=1"/>
+					<Add option="-DLWIP_IPV6=0"/>
+					<Add option="-DVTABLES_IN_FLASH"/>
+					<Add option="-DMMU_IRAM_SIZE=0x8000"/>
+					<Add option="-DMMU_ICACHE_SIZE=0x8000"/>
+					<Add directory="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/include"/>
+					<Add directory="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/src"/>
+					<Add directory="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/src"/>
+					<Add directory="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto"/>
+					<Add directory="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src"/>
+					<Add directory="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/WiFiManager"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/DNSServer/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WebServer/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFi/src"/>
+					<Add directory="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/NTPClient"/>
+					<Add directory="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/PubSubClient/src"/>
+					<Add directory="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/tools/sdk/include"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/cores/esp8266"/>
+					<Add directory="/Users/xuqi/.platformio/packages/toolchain-xtensa/include"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/tools/sdk/lwip2/include"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/variants/generic"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ArduinoOTA"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/EEPROM"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266AVRISP/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPClient/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPUpdateServer/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266LLMNR"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266NetBIOS"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266SSDP"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266SdFat/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFiMesh/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266httpUpdate/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266mDNS/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/Ethernet/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/GDBStub/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/Hash/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/I2S/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/LittleFS/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/Netdump/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/SD/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/SDFS/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/SPI"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/SPISlave/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/Servo/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/SoftwareSerial/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/TFT_Touch_Shield_V2"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/Ticker/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/Wire"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/esp8266/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/lwIP_PPP/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/lwIP_enc28j60/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/lwIP_w5100/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/lwIP_w5500/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/toolchain-xtensa/xtensa-lx106-elf/include/c++/10.3.0"/>
+					<Add directory="/Users/xuqi/.platformio/packages/toolchain-xtensa/xtensa-lx106-elf/include/c++/10.3.0/xtensa-lx106-elf"/>
+					<Add directory="/Users/xuqi/.platformio/packages/toolchain-xtensa/lib/gcc/xtensa-lx106-elf/10.3.0/include"/>
+					<Add directory="/Users/xuqi/.platformio/packages/toolchain-xtensa/lib/gcc/xtensa-lx106-elf/10.3.0/include-fixed"/>
+					<Add directory="/Users/xuqi/.platformio/packages/toolchain-xtensa/xtensa-lx106-elf/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 Z_DUMMY_TARGET"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Z_DUMMY_TARGET/fast">
+				<Option output="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Z_DUMMY_TARGET" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORMIO=60002"/>
+					<Add option="-DESP8266"/>
+					<Add option="-DARDUINO_ARCH_ESP8266"/>
+					<Add option="-DARDUINO_ESP8266_ESP01"/>
+					<Add option="-DF_CPU=80000000L"/>
+					<Add option="-D__ets__"/>
+					<Add option="-DICACHE_FLASH"/>
+					<Add option="-DARDUINO=10805"/>
+					<Add option="-DARDUINO_BOARD=&quot;PLATFORMIO_ESP01&quot;"/>
+					<Add option="-DFLASHMODE_QIO"/>
+					<Add option="-DLWIP_OPEN_SRC"/>
+					<Add option="-DNONOSDK22x_190703=1"/>
+					<Add option="-DTCP_MSS=536"/>
+					<Add option="-DLWIP_FEATURES=1"/>
+					<Add option="-DLWIP_IPV6=0"/>
+					<Add option="-DVTABLES_IN_FLASH"/>
+					<Add option="-DMMU_IRAM_SIZE=0x8000"/>
+					<Add option="-DMMU_ICACHE_SIZE=0x8000"/>
+					<Add directory="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/include"/>
+					<Add directory="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/src"/>
+					<Add directory="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/src"/>
+					<Add directory="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto"/>
+					<Add directory="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src"/>
+					<Add directory="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/WiFiManager"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/DNSServer/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WebServer/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFi/src"/>
+					<Add directory="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/NTPClient"/>
+					<Add directory="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/PubSubClient/src"/>
+					<Add directory="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/tools/sdk/include"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/cores/esp8266"/>
+					<Add directory="/Users/xuqi/.platformio/packages/toolchain-xtensa/include"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/tools/sdk/lwip2/include"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/variants/generic"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ArduinoOTA"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/EEPROM"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266AVRISP/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPClient/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPUpdateServer/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266LLMNR"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266NetBIOS"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266SSDP"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266SdFat/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFiMesh/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266httpUpdate/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266mDNS/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/Ethernet/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/GDBStub/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/Hash/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/I2S/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/LittleFS/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/Netdump/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/SD/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/SDFS/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/SPI"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/SPISlave/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/Servo/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/SoftwareSerial/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/TFT_Touch_Shield_V2"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/Ticker/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/Wire"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/esp8266/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/lwIP_PPP/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/lwIP_enc28j60/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/lwIP_w5100/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/framework-arduinoespressif8266/libraries/lwIP_w5500/src"/>
+					<Add directory="/Users/xuqi/.platformio/packages/toolchain-xtensa/xtensa-lx106-elf/include/c++/10.3.0"/>
+					<Add directory="/Users/xuqi/.platformio/packages/toolchain-xtensa/xtensa-lx106-elf/include/c++/10.3.0/xtensa-lx106-elf"/>
+					<Add directory="/Users/xuqi/.platformio/packages/toolchain-xtensa/lib/gcc/xtensa-lx106-elf/10.3.0/include"/>
+					<Add directory="/Users/xuqi/.platformio/packages/toolchain-xtensa/lib/gcc/xtensa-lx106-elf/10.3.0/include-fixed"/>
+					<Add directory="/Users/xuqi/.platformio/packages/toolchain-xtensa/xtensa-lx106-elf/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 Z_DUMMY_TARGET/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Debug">
+				<Option working_dir="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 Debug"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Production">
+				<Option working_dir="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 Production"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/.github/ISSUE_TEMPLATE.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/.github/PULL_REQUEST_TEMPLATE.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/.github/workflows/githubci.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/.gitignore">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/.piopm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/Adafruit_NeoPixel.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/Adafruit_NeoPixel.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/CONTRIBUTING.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/README.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/esp.c">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/esp8266.c">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/RGBWstrandtest/.esp8266.test.skip">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/RGBWstrandtest/.trinket.test.skip">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/RGBWstrandtest/RGBWstrandtest.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/StrandtestArduinoBLE/.none.test.only">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/StrandtestArduinoBLE/StrandtestArduinoBLE.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/StrandtestArduinoBLECallback/.none.test.only">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/StrandtestArduinoBLECallback/StrandtestArduinoBLECallback.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/StrandtestBLE/.none.test.only">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/StrandtestBLE/BLESerial.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/StrandtestBLE/BLESerial.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/StrandtestBLE/StrandtestBLE.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/StrandtestBLE_nodelay/.none.test.only">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/StrandtestBLE_nodelay/BLESerial.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/StrandtestBLE_nodelay/BLESerial.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/StrandtestBLE_nodelay/StrandtestBLE_nodelay.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/buttoncycler/.esp8266.test.skip">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/buttoncycler/buttoncycler.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/simple/.esp8266.test.skip">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/simple/simple.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/simple_new_operator/.esp8266.test.skip">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/simple_new_operator/simple_new_operator.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/strandtest/.esp8266.test.skip">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/strandtest/strandtest.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/strandtest_nodelay/.esp8266.test.skip">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/strandtest_nodelay/strandtest_nodelay.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/strandtest_wheel/.esp8266.test.skip">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/examples/strandtest_wheel/strandtest_wheel.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/kendyte_k210.c">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/keywords.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/library.properties">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Adafruit NeoPixel/rp2040_pio.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/.git/.piopm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/.git/hooks/applypatch-msg.sample">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/.git/hooks/commit-msg.sample">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/.git/hooks/fsmonitor-watchman.sample">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/.git/hooks/post-update.sample">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/.git/hooks/pre-applypatch.sample">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/.git/hooks/pre-commit.sample">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/.git/hooks/pre-merge-commit.sample">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/.git/hooks/pre-push.sample">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/.git/hooks/pre-rebase.sample">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/.git/hooks/pre-receive.sample">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/.git/hooks/prepare-commit-msg.sample">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/.git/hooks/push-to-checkout.sample">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/.git/hooks/update.sample">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/.git/objects/pack/pack-0686db222362db9972ecb6db4249d4552a08deef.idx">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/.git/objects/pack/pack-0686db222362db9972ecb6db4249d4552a08deef.pack">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/CHANGES.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/LICENSE.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/README.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/examples/esp8266/aliyun.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/keywords.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/library.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/library.properties">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/src/AliyunIoTSDK.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/src/AliyunIoTSDK.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/AliyunIoTSDK/如何使用 arduino-aliyun-iot-sdk 2 行代码接入物联网平台.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/.clang-format">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/.gitattributes">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/.gitignore">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/.mbedignore">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/.piopm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/.prettierignore">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/ArduinoJson.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/CHANGELOG.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/CMakeLists.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/CONTRIBUTING.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/LICENSE.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/README.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/SUPPORT.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/appveyor.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/banner.svg">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/component.mk">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/examples/JsonConfigFile/JsonConfigFile.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/examples/JsonFilterExample/JsonFilterExample.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/examples/JsonGeneratorExample/JsonGeneratorExample.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/examples/JsonHttpClient/JsonHttpClient.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/examples/JsonParserExample/JsonParserExample.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/examples/JsonServer/JsonServer.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/examples/JsonUdpBeacon/JsonUdpBeacon.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/examples/MsgPackParser/MsgPackParser.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/examples/ProgmemExample/ProgmemExample.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/examples/StringExample/StringExample.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/keywords.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/library.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/library.properties">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Array/ArrayFunctions.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Array/ArrayImpl.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Array/ArrayIterator.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Array/ArrayRef.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Array/ArrayShortcuts.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Array/ElementProxy.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Array/Utilities.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Collection/CollectionData.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Collection/CollectionImpl.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Configuration.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Deserialization/DeserializationError.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Deserialization/Filter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Deserialization/NestingLimit.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Deserialization/Reader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Deserialization/Readers/ArduinoStreamReader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Deserialization/Readers/ArduinoStringReader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Deserialization/Readers/FlashReader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Deserialization/Readers/IteratorReader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Deserialization/Readers/RamReader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Deserialization/Readers/StdStreamReader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Deserialization/Readers/VariantReader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Deserialization/deserialize.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Document/BasicJsonDocument.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Document/DynamicJsonDocument.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Document/JsonDocument.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Document/StaticJsonDocument.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Json/EscapeSequence.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Json/JsonDeserializer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Json/JsonSerializer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Json/Latch.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Json/PrettyJsonSerializer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Json/TextFormatter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Json/Utf16.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Json/Utf8.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Memory/Alignment.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Memory/MemoryPool.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Misc/SafeBoolIdiom.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Misc/SerializedValue.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Misc/Visitable.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/MsgPack/MsgPackDeserializer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/MsgPack/MsgPackSerializer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/MsgPack/endianess.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/MsgPack/ieee754.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Namespace.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Numbers/Float.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Numbers/FloatParts.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Numbers/FloatTraits.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Numbers/Integer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Numbers/arithmeticCompare.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Numbers/convertNumber.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Numbers/parseNumber.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Object/MemberProxy.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Object/ObjectFunctions.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Object/ObjectImpl.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Object/ObjectIterator.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Object/ObjectRef.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Object/ObjectShortcuts.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Object/Pair.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/alias_cast.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/assert.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/attributes.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/ctype.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/integer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/limits.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/math.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/mpl/max.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/pgmspace.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/pgmspace_generic.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/preprocessor.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/static_array.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/type_traits.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/conditional.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/declval.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/enable_if.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/integral_constant.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_array.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_base_of.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_class.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_const.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_convertible.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_enum.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_floating_point.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_integral.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_pointer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_same.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_signed.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_unsigned.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/make_unsigned.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/make_void.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/remove_const.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/remove_cv.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/remove_reference.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/type_identity.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Serialization/CountingDecorator.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Serialization/Writer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Serialization/Writers/ArduinoStringWriter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Serialization/Writers/DummyWriter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Serialization/Writers/PrintWriter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Serialization/Writers/StaticStringWriter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Serialization/Writers/StdStreamWriter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Serialization/Writers/StdStringWriter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Serialization/measure.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Serialization/serialize.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/StringStorage/StringCopier.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/StringStorage/StringMover.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/StringStorage/StringStorage.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Strings/Adapters/ArduinoString.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Strings/Adapters/FlashString.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Strings/Adapters/JsonString.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Strings/Adapters/RamString.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Strings/Adapters/StdString.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Strings/Adapters/StringView.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Strings/IsString.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Strings/StoragePolicy.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Strings/String.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Strings/StringAdapters.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Variant/Converter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Variant/ConverterImpl.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Variant/SlotFunctions.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Variant/VariantCompare.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Variant/VariantContent.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Variant/VariantData.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Variant/VariantFunctions.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Variant/VariantImpl.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Variant/VariantOperators.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Variant/VariantRef.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Variant/VariantShortcuts.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Variant/VariantSlot.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Variant/VariantTag.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Variant/VariantTo.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/Variant/Visitor.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/compatibility.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/ArduinoJson/version.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/ArduinoJson/src/CMakeLists.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/.piopm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/AES.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/AES128.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/AES192.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/AES256.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/AESCommon.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/AESEsp32.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/AuthenticatedCipher.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/AuthenticatedCipher.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/BLAKE2b.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/BLAKE2b.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/BLAKE2s.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/BLAKE2s.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/BigNumberUtil.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/BigNumberUtil.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/BlockCipher.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/BlockCipher.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/CTR.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/CTR.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/ChaCha.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/ChaCha.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/ChaChaPoly.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/ChaChaPoly.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/Cipher.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/Cipher.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/Crypto.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/Crypto.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/Curve25519.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/Curve25519.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/EAX.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/EAX.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/Ed25519.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/Ed25519.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/GCM.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/GCM.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/GF128.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/GF128.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/GHASH.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/GHASH.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/HKDF.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/HKDF.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/Hash.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/Hash.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/KeccakCore.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/KeccakCore.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/NoiseSource.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/NoiseSource.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/OMAC.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/OMAC.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/P521.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/P521.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/Poly1305.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/Poly1305.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/RNG.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/RNG.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/SHA224.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/SHA224.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/SHA256.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/SHA256.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/SHA3.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/SHA3.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/SHA384.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/SHA384.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/SHA512.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/SHA512.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/SHAKE.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/SHAKE.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/XOF.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/XOF.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/XTS.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/XTS.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/AES128_Basics/AES128_Basics.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestAES/TestAES.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestAESSmall/TestAESSmall.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestAESTiny/TestAESTiny.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestBLAKE2b/TestBLAKE2b.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestBLAKE2s/TestBLAKE2s.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestBigNumberUtil/TestBigNumberUtil.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestCTR/TestCTR.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestChaCha/TestChaCha.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestChaChaPoly/TestChaChaPoly.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestCurve25519/TestCurve25519.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestCurve25519Math/TestCurve25519Math.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestEAX/TestEAX.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestEd25519/TestEd25519.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestGCM/TestGCM.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestGHASH/TestGHASH.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestHKDF/TestHKDF.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestP521/TestP521.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestP521Math/TestP521Math.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestPoly1305/TestPoly1305.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestRNG/TestRNG.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestSHA224/TestSHA224.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestSHA256/TestSHA256.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestSHA384/TestSHA384.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestSHA3_256/TestSHA3_256.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestSHA3_512/TestSHA3_512.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestSHA512/TestSHA512.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestSHAKE128/TestSHAKE128.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestSHAKE256/TestSHAKE256.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/examples/TestXTS/TestXTS.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/keywords.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/library.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/utility/EndianUtil.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/utility/LimbUtil.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/utility/ProgMemUtil.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/Crypto/utility/RotateUtil.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/NTPClient/.codespellrc">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/NTPClient/.github/dependabot.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/NTPClient/.github/workflows/check-arduino.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/NTPClient/.github/workflows/compile-examples.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/NTPClient/.github/workflows/report-size-deltas.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/NTPClient/.github/workflows/spell-check.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/NTPClient/.github/workflows/sync-labels.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/NTPClient/.piopm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/NTPClient/NTPClient.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/NTPClient/NTPClient.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/NTPClient/README.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/NTPClient/examples/Advanced/Advanced.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/NTPClient/examples/Basic/Basic.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/NTPClient/examples/IsTimeSet/IsTimeSet.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/NTPClient/keywords.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/NTPClient/library.properties">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/PubSubClient/.gitignore">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/PubSubClient/.piopm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/PubSubClient/.travis.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/PubSubClient/CHANGES.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/PubSubClient/LICENSE.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/PubSubClient/README.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/PubSubClient/examples/mqtt_auth/mqtt_auth.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/PubSubClient/examples/mqtt_basic/mqtt_basic.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/PubSubClient/examples/mqtt_esp8266/mqtt_esp8266.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/PubSubClient/examples/mqtt_large_message/mqtt_large_message.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/PubSubClient/examples/mqtt_publish_in_callback/mqtt_publish_in_callback.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/PubSubClient/examples/mqtt_reconnect_nonblocking/mqtt_reconnect_nonblocking.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/PubSubClient/examples/mqtt_stream/mqtt_stream.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/PubSubClient/keywords.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/PubSubClient/library.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/PubSubClient/library.properties">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/PubSubClient/src/PubSubClient.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/PubSubClient/src/PubSubClient.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/WiFiManager/.github/CONTRIBUTING.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/WiFiManager/.github/ISSUE_TEMPLATE.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/WiFiManager/.piopm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/WiFiManager/.travis.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/WiFiManager/README.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/WiFiManager/WiFiManager.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/WiFiManager/WiFiManager.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/WiFiManager/examples/AutoConnect/AutoConnect.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/WiFiManager/examples/AutoConnectWithFSParameters/AutoConnectWithFSParameters.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/WiFiManager/examples/AutoConnectWithFSParametersAndCustomIP/AutoConnectWithFSParametersAndCustomIP.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/WiFiManager/examples/AutoConnectWithFeedback/AutoConnectWithFeedback.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/WiFiManager/examples/AutoConnectWithFeedbackLED/AutoConnectWithFeedbackLED.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/WiFiManager/examples/AutoConnectWithReset/AutoConnectWithReset.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/WiFiManager/examples/AutoConnectWithStaticIP/AutoConnectWithStaticIP.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/WiFiManager/examples/AutoConnectWithTimeout/AutoConnectWithTimeout.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/WiFiManager/examples/OnDemandConfigPortal/OnDemandConfigPortal.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/WiFiManager/extras/template.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/WiFiManager/keywords.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/WiFiManager/library.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/WiFiManager/library.properties">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/WiFiManager/travis/common.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/.pio/libdeps/esp01/integrity.dat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/src/main.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/CMakeListsPrivate.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
