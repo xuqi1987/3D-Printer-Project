@@ -11,7 +11,7 @@
 
 // Called to identify this accessory. See HAP section 6.7.6 Identify Routine
 // Generally this is called when paired successfully or click the "Identify Accessory" button in Home APP.
-void my_accessory_identify(homekit_value_t _value) {
+void temperature_sensor_accessory_identify(homekit_value_t _value) {
 	printf("accessory identify\n");
 }
 
@@ -50,7 +50,7 @@ homekit_accessory_t *accessories[] = {
             HOMEKIT_CHARACTERISTIC(SERIAL_NUMBER, "0123456"),
             HOMEKIT_CHARACTERISTIC(MODEL, "ESP8266/ESP32"),
             HOMEKIT_CHARACTERISTIC(FIRMWARE_REVISION, "1.0"),
-            HOMEKIT_CHARACTERISTIC(IDENTIFY, my_accessory_identify),
+            HOMEKIT_CHARACTERISTIC(IDENTIFY, temperature_sensor_accessory_identify),
             NULL
         }),
         HOMEKIT_SERVICE(TEMPERATURE_SENSOR, .primary=true, .characteristics=(homekit_characteristic_t*[]) {
@@ -73,7 +73,7 @@ homekit_accessory_t *accessories[] = {
     NULL
 };
 
-homekit_server_config_t config = {
+homekit_server_config_t temperature_sensor_config = {
 		.accessories = accessories,
 		.password = "111-11-111"
 };

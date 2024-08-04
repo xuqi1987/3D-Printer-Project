@@ -1,7 +1,8 @@
 {
     "folders": [
         {
-            "path": ".."
+            "name": "WeMosD1_HomeKit_Occupancy",
+            "path": "../../WeMosD1_HomeKit_Occupancy"
         }
     ],
     "settings": {

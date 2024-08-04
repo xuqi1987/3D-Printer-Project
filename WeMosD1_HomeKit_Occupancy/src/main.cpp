@@ -4,20 +4,14 @@
 #include <WiFiManager.h>          // https://github.com/tzapu/WiFiManager
 #include <arduino_homekit_server.h>
 #include <Ticker.h>
-#include <Adafruit_Sensor.h>
-#include <DHT.h>
-#include <DHT_U.h>
 
-#define DHTPIN D2  // DHT22 数据引脚接 D2
-#define DHTTYPE DHT22  // DHT 22 (AM2302)
-
-DHT_Unified dht(DHTPIN, DHTTYPE);
+#define PIR_SENSOR_PIN D2  // PIR传感器数据引脚连接到D2
 
 #define LOG_D(fmt, ...)   printf_P(PSTR(fmt "\n") , ##__VA_ARGS__);
 
-void temperature_sensor_homekit_setup();
-void temperature_sensor_homekit_report();
-void temperature_sensor_homekit_loop();
+void multiple_sensor_homekit_setup();
+void multiple_sensor_homekit_report();
+void multiple_sensor_homekit_loop();
 
 Ticker ticker;
 void tick() {
@@ -72,19 +66,18 @@ void setup() {
   // 保持LED亮
   digitalWrite(LED_BUILTIN, LOW);
 
-  // 初始化 DHT22
-  dht.begin();
-  Serial.println("DHT22 初始化完成");
+  pinMode(PIR_SENSOR_PIN, INPUT);
+  Serial.println("PIR 传感器初始化完成");
 
   // 给传感器一些时间来稳定
   delay(2000);
 
-  temperature_sensor_homekit_setup();
+  multiple_sensor_homekit_setup();
 }
 
 
 void loop() {
-	temperature_sensor_homekit_loop();
+	multiple_sensor_homekit_loop();
 	delay(10);
 }
 
@@ -93,25 +86,24 @@ void loop() {
 //==============================
 
 // access your homekit characteristics defined in temperature_sensor_accessory.c
-extern "C" homekit_server_config_t temperature_sensor_config;
-extern "C" homekit_characteristic_t cha_current_temperature;
-extern "C" homekit_characteristic_t cha_humidity;
+extern "C" homekit_server_config_t multiple_sensor_config;
+extern "C" homekit_characteristic_t occupancy_cha_occupancy;
 
 static uint32_t next_heap_millis = 0;
 static uint32_t next_report_millis = 0;
 
-void temperature_sensor_homekit_setup() {
-	arduino_homekit_setup(&temperature_sensor_config);
+void multiple_sensor_homekit_setup() {
+	arduino_homekit_setup(&multiple_sensor_config);
 }
 
-void temperature_sensor_homekit_loop() {
+void multiple_sensor_homekit_loop() {
 	arduino_homekit_loop();
   
 	const uint32_t t = millis();
 	if (t > next_report_millis) {
 		// report sensor values every 10 seconds
 		next_report_millis = t + 10 * 1000;
-		temperature_sensor_homekit_report();
+		multiple_sensor_homekit_report();
 	}
 	if (t > next_heap_millis) {
 		// show heap info every 5 seconds
@@ -121,36 +113,14 @@ void temperature_sensor_homekit_loop() {
 	}
 }
 
-void temperature_sensor_homekit_report() {
-  static float temperature_value = 0;
-  static float relative_humidity = 0;
+void multiple_sensor_homekit_report() {
 
-  // 获取传感器事件
-  sensors_event_t event;
-  
-  dht.temperature().getEvent(&event);
-  if (isnan(event.temperature)) {
-      Serial.println("读取温度失败！");
-  } else {
-      Serial.print("温度: ");
-      Serial.print(event.temperature);
-      temperature_value = event.temperature;
-      Serial.println(" °C");
+    // 检测PIR传感器状态
+  bool motion_detected = digitalRead(PIR_SENSOR_PIN);
+  if (occupancy_cha_occupancy.value.bool_value != motion_detected) {
+    occupancy_cha_occupancy.value.bool_value = motion_detected;
+    homekit_characteristic_notify(&occupancy_cha_occupancy, occupancy_cha_occupancy.value);
+    Serial.print("运动检测状态: ");
+    Serial.println(motion_detected ? "检测到运动" : "无运动");
   }
-
-  dht.humidity().getEvent(&event);
-  if (isnan(event.relative_humidity)) {
-      Serial.println("读取湿度失败！");
-  } else {
-      Serial.print("湿度: ");
-      Serial.print(event.relative_humidity);
-      relative_humidity = event.relative_humidity;
-      Serial.println(" %");
-  }
-
-  cha_current_temperature.value.float_value = temperature_value;
-  homekit_characteristic_notify(&cha_current_temperature, cha_current_temperature.value);
-
-  cha_humidity.value.float_value = relative_humidity;
-  homekit_characteristic_notify(&cha_humidity, cha_humidity.value);
 }
