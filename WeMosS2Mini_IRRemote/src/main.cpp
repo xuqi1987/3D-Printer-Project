@@ -7,7 +7,7 @@
 #include <Adafruit_SSD1306.h>
 
 #define SCREEN_WIDTH 128
-#define SCREEN_HEIGHT 32
+#define SCREEN_HEIGHT 64
 #define OLED_RESET    -1
 
 // 使用手动指定的 SDA 和 SCK 引脚初始化 OLED 显示屏
@@ -24,6 +24,9 @@ IRGreeAC ac(kIrLed);  // 设置红外发射引脚
 #define BUTTON_TEMP_DOWN 14
 #define BUTTON_MODE    15
 
+// 红外人体传感器引脚
+#define PIR_SENSOR_PIN 17  // 根据实际情况选择合适的引脚
+
 // 函数声明
 void printState();
 void togglePower();
@@ -31,6 +34,7 @@ void increaseTemperature();
 void decreaseTemperature();
 void changeMode();
 void displayCommand(String command);
+void displaySensorState(bool state);
 
 void setup() {
   // 初始化红外发射
@@ -55,6 +59,9 @@ void setup() {
   pinMode(BUTTON_TEMP_DOWN, INPUT_PULLUP);
   pinMode(BUTTON_MODE, INPUT_PULLUP);
 
+  // 初始化红外人体传感器引脚
+  pinMode(PIR_SENSOR_PIN, INPUT);
+
   displayCommand("System Ready");
   Serial.println("初始状态设置完成，未发送任何控制信号。");
 }
@@ -69,6 +76,19 @@ void loop() {
   } else if (digitalRead(BUTTON_MODE) == LOW) {
     changeMode();
   }
+
+  // 检测红外人体传感器状态
+  bool sensorState = digitalRead(PIR_SENSOR_PIN) == HIGH;
+  displaySensorState(sensorState);
+
+  if (sensorState) {
+    Serial.println("检测到人体移动");
+    // 自动打开空调
+    if (!ac.getPower()) {
+      togglePower();
+    }
+  }
+
   delay(200);  // 防止误触发
 }
 
@@ -122,10 +142,24 @@ void printState() {
 void displayCommand(String command) {
   // 在 OLED 显示屏上显示命令状态
   display.clearDisplay();
-  display.setTextSize(1);
+  display.setTextSize(2);
   display.setTextColor(SSD1306_WHITE);
   display.setCursor(0, 0);
   display.println("Command Sent:");
   display.println(command);
+  display.display();  // 刷新显示内容
+}
+
+void displaySensorState(bool state) {
+  // 在 OLED 显示屏上显示传感器状态（高或低）
+  display.clearDisplay();
+  display.setTextSize(2);
+  display.setTextColor(SSD1306_WHITE);
+  display.setCursor(0, 16);  // 在屏幕中间显示状态
+  if (state) {
+    display.println("High");
+  } else {
+    display.println("Low");
+  }
   display.display();  // 刷新显示内容
 }
