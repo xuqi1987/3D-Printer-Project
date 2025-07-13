@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/build",
+  "command": "/Users/xuqi/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ -fno-rtti -std=gnu++17 -fno-exceptions -Os -mlongcalls -mtext-section-literals -falign-functions=4 -U__STRICT_ANSI__ -D_GNU_SOURCE -ffunction-sections -fdata-sections -Wall -Werror=return-type -free -fipa-pta -g -std=gnu++17 -o CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj -c /Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/src/main.cpp",
+  "file": "/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/src/main.cpp"
+}
+]

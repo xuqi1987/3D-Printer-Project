@@ -1,5 +1,0 @@
-/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/CMakeFiles/rebuild_cache.dir
-/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/CMakeFiles/edit_cache.dir
-/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/CMakeFiles/Z_DUMMY_TARGET.dir
-/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/CMakeFiles/Debug.dir
-/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/cmake-build-esp01/CMakeFiles/Production.dir

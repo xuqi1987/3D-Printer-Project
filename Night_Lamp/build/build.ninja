@@ -1,0 +1,166 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: Night_Lamp
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/build/
+
+#############################################
+# Utility command for Production
+
+build Production: phony CMakeFiles/Production
+
+
+#############################################
+# Utility command for Debug
+
+build Debug: phony CMakeFiles/Debug
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Z_DUMMY_TARGET
+
+
+#############################################
+# Order-only phony target for Z_DUMMY_TARGET
+
+build cmake_object_order_depends_target_Z_DUMMY_TARGET: phony || CMakeFiles/Z_DUMMY_TARGET.dir
+
+build CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj: CXX_COMPILER__Z_DUMMY_TARGET_Debug /Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/src/main.cpp || cmake_object_order_depends_target_Z_DUMMY_TARGET
+  DEP_FILE = CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj.d
+  FLAGS = -fno-rtti -std=gnu++17 -fno-exceptions -Os -mlongcalls -mtext-section-literals -falign-functions=4 -U__STRICT_ANSI__ -D_GNU_SOURCE -ffunction-sections -fdata-sections -Wall -Werror=return-type -free -fipa-pta -g -std=gnu++17
+  OBJECT_DIR = CMakeFiles/Z_DUMMY_TARGET.dir
+  OBJECT_FILE_DIR = CMakeFiles/Z_DUMMY_TARGET.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Z_DUMMY_TARGET
+
+
+#############################################
+# Link the executable Z_DUMMY_TARGET
+
+build Z_DUMMY_TARGET: CXX_EXECUTABLE_LINKER__Z_DUMMY_TARGET_Debug CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj
+  FLAGS = -fno-rtti -std=gnu++17 -fno-exceptions -Os -mlongcalls -mtext-section-literals -falign-functions=4 -U__STRICT_ANSI__ -D_GNU_SOURCE -ffunction-sections -fdata-sections -Wall -Werror=return-type -free -fipa-pta -g
+  OBJECT_DIR = CMakeFiles/Z_DUMMY_TARGET.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Z_DUMMY_TARGET
+  TARGET_PDB = Z_DUMMY_TARGET.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ccmake -S/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp -B/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake --regenerate-during-build -S/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp -B/Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Custom command for CMakeFiles/Production
+
+build CMakeFiles/Production | ${cmake_ninja_workdir}CMakeFiles/Production: CUSTOM_COMMAND
+  COMMAND = cd /Users/xuqi/Proj/3D-Printer-Project/Night_Lamp && platformio -c clion run -eDebug
+
+
+#############################################
+# Custom command for CMakeFiles/Debug
+
+build CMakeFiles/Debug | ${cmake_ninja_workdir}CMakeFiles/Debug: CUSTOM_COMMAND
+  COMMAND = cd /Users/xuqi/Proj/3D-Printer-Project/Night_Lamp && platformio -c clion debug -eDebug
+
+# =============================================================================
+# Target aliases.
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/build
+
+build all: phony Production Debug Z_DUMMY_TARGET
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | /Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/CMakeLists.txt /Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/CMakeListsPrivate.txt /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build /Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/CMakeLists.txt /Users/xuqi/Proj/3D-Printer-Project/Night_Lamp/CMakeListsPrivate.txt /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all
