@@ -1,0 +1,16 @@
+// 备选分辨率配置注释
+// 如果Full HD (1920x1080) 撕裂问题严重，可以考虑以下选项：
+
+// 选项1: UXGA (1600x1200) - 高分辨率但比Full HD容易处理
+// s_camera_config.frame_size = FRAMESIZE_UXGA;
+
+// 选项2: SXGA (1280x1024) - 方形高分辨率
+// s_camera_config.frame_size = FRAMESIZE_SXGA;
+
+// 选项3: 回到HD (1280x720) - 16:9宽屏，处理轻松
+// s_camera_config.frame_size = FRAMESIZE_HD;
+
+// 推荐测试顺序：
+// 1. 先试当前的Full HD + 5fps配置
+// 2. 如仍有撕裂，改用UXGA + 8fps
+// 3. 最后备选HD + 10fps

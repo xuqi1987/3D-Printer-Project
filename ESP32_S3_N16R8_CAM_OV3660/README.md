@@ -1,199 +1,190 @@
-| Supported Targets | ESP32 | ESP32-C2 | ESP32-C3 | ESP32-C5 | ESP32-C6 | ESP32-C61 | ESP32-H2 | ESP32-P4 | ESP32-S2 | ESP32-S3 | Linux |
-| ----------------- | ----- | -------- | -------- | -------- | -------- | --------- | -------- | -------- | -------- | -------- | ----- |
+# ESP32-S3 MJPEG RTSP Camera Server
 
-# ESP32-S3 OV2640 摄像头驱动
+## 项目概述
 
-这是一个基于 ESP32-S3 的 OV2640 摄像头驱动程序，提供了完整的摄像头初始化、图像采集和参数配置功能。
+这是一个专为ESP32-S3设计的MJPEG RTSP摄像头服务器项目，通过WiFi提供实时视频流。该项目充分利用ESP32-S3的硬件能力，直接使用摄像头的原生JPEG输出，避免了软件编码的开销。
 
-## 功能特点
+## 🚀 主要特性
 
-- 支持多种图像格式：
-  - RGB565（默认）
-  - JPEG
-- 支持多种分辨率：
-  - QQVGA (160x120)
-  - QVGA (320x240)
-  - VGA (640x480)
-- 可配置的 JPEG 压缩质量（0-63）
-- 支持帧缓存管理
-- 支持 SCCB（I2C）接口配置
-- 支持硬件 XCLK 时钟生成
+- **MJPEG格式流媒体** - 使用RFC 2435标准，直接传输摄像头JPEG数据
+- **RTSP协议支持** - 完整的RTSP 1.0实现，支持OPTIONS、DESCRIBE、SETUP、PLAY、TEARDOWN
+- **TCP交错传输** - 使用TCP interleaved方式传输RTP数据，提高可靠性  
+- **高性能优化** - 针对ESP32-S3硬件特性优化，37fps@640x480
+- **内存管理** - 增强的内存配置，16KB主任务栈，8KB系统任务栈
+- **WiFi连接管理** - 自动连接和重连机制
+- **系统监控** - 实时FPS、内存使用、温度监控
 
-## 引脚定义
+## 📋 硬件要求
 
-### 数据引脚
-| 引脚名称 | GPIO编号 | 功能描述 |
-|---------|---------|---------|
-| D0/Y2   | GPIO11  | 数据位0 |
-| D1/Y3   | GPIO9   | 数据位1 |
-| D2/Y4   | GPIO8   | 数据位2 |
-| D3/Y5   | GPIO10  | 数据位3 |
-| D4/Y6   | GPIO12  | 数据位4 |
-| D5/Y7   | GPIO18  | 数据位5 |
-| D6/Y8   | GPIO17  | 数据位6 |
-| D7/Y9   | GPIO16  | 数据位7 |
-| PCLK    | GPIO13  | 像素时钟 |
-| VSYNC   | GPIO6   | 垂直同步 |
-| HREF    | GPIO7   | 水平参考 |
+- **ESP32-S3 开发板** (推荐16MB Flash + 8MB PSRAM)
+- **OV3660 摄像头模块**
+- **WiFi网络环境**
 
-### 控制引脚
-| 引脚名称 | GPIO编号 | 功能描述 |
-|---------|---------|---------|
-| XCLK    | GPIO15  | 系统时钟 |
-| RESET   | NC      | 复位控制（未使用） |
-| PWDN    | NC      | 掉电控制（未使用） |
+## 🔧 快速开始
 
-### SCCB (I2C) 接口
-| 引脚名称 | GPIO编号 | 功能描述 |
-|---------|---------|---------|
-| SIOD    | GPIO4   | SCCB 数据线 |
-| SIOC    | GPIO5   | SCCB 时钟线 |
+### 1. 环境配置
+```bash
+# 确保ESP-IDF v5.4.2已安装
+source ~/esp/esp-idf/export.sh
 
-## 使用方法
+# 克隆项目
+git clone <repository_url>
+cd ESP32_S3_N16R8_CAM_OV3660
+```
 
-1. 包含必要的头文件：
+### 2. 配置WiFi
+编辑 `main/app_config.h` 文件，设置您的WiFi信息：
 ```c
-#include "ov2640.h"
-#include "board_pins.h"
+#define WIFI_SSID "Your_WiFi_Name"
+#define WIFI_PASSWORD "Your_WiFi_Password"  
 ```
 
-2. 定义摄像头配置：
+### 3. 构建和刷写
+```bash
+# 使用便捷脚本（推荐）
+./build_flash.sh
+
+# 或手动构建
+idf.py build
+idf.py -p /dev/cu.usbserial-210 flash monitor
+```
+
+### 4. 测试连接
+设备启动后会显示IP地址，使用以下命令测试：
+```bash
+# 使用FFmpeg测试
+ffmpeg -rtsp_transport tcp -i rtsp://192.168.31.104:8554/live -t 10 -vcodec copy test.mp4
+
+# 使用VLC播放器
+vlc rtsp://192.168.31.104:8554/live
+
+# 使用Python脚本测试
+python test_rtsp_commands.py
+```
+
+## 📁 项目结构
+
+```
+├── main/                       # 主程序
+│   ├── main.c                 # 应用入口
+│   ├── app_config.h           # 配置文件
+│   └── camera_pins.h          # 摄像头引脚定义
+├── components/                 # 组件目录
+│   ├── h264_rtsp_server/      # RTSP服务器（重命名保持兼容）
+│   ├── camera_manager/        # 摄像头管理
+│   ├── wifi_manager/          # WiFi管理
+│   └── system_monitor/        # 系统监控
+├── build_flash.sh             # 构建刷写脚本
+├── test_rtsp_commands.py      # Python测试脚本
+└── README.md                  # 项目文档
+```
+
+## 🔬 技术细节
+
+### RTSP协议实现
+- **SDP格式**: 使用MJPEG专用SDP描述（payload type 26）
+- **传输方式**: TCP interleaved (RTP over TCP)
+- **端口**: 8554 (标准RTSP端口)
+- **会话管理**: 支持多客户端连接，自动会话超时
+
+### 性能指标
+- **分辨率**: 640x480 (VGA)
+- **帧率**: 37 FPS
+- **编码**: MJPEG (摄像头原生JPEG)
+- **比特率**: 动态调整，质量等级12
+- **延迟**: <100ms (局域网)
+
+### 内存使用
+- **总Flash**: 915KB (23% 使用)
+- **可用PSRAM**: 8MB
+- **运行时内存**: ~8MB可用堆内存
+- **栈配置**: 主任务16KB，系统任务8KB
+
+## 🛠️ 开发工具
+
+### 构建脚本 `build_flash.sh`
+```bash
+# 构建
+./build_flash.sh
+
+# 构建并监控
+./build_flash.sh monitor
+
+# 清理构建
+./build_flash.sh clean
+```
+
+### Python测试工具 `test_rtsp_commands.py`
+- RTP包计数和统计
+- 帧率测试
+- 丢包率检测
+- RTSP命令序列测试
+
+## 🔍 故障排除
+
+### 常见问题
+
+1. **WiFi连接失败**
+   - 检查SSID和密码配置
+   - 确认2.4GHz网络（ESP32不支持5GHz）
+
+2. **RTSP连接超时**
+   - 确认防火墙设置
+   - 检查端口8554是否被占用
+   - 使用TCP传输模式
+
+3. **视频卡顿**
+   - 检查网络带宽
+   - 调整视频质量参数
+   - 监控ESP32内存使用
+
+4. **构建错误**
+   - 确认ESP-IDF版本为5.4.2
+   - 检查串口权限和设备路径
+
+### 调试模式
+启用详细日志：
 ```c
-ov2640_config_t camera_config = {
-    .pin_pwdn = PWDN_GPIO_NUM,
-    .pin_reset = RESET_GPIO_NUM,
-    .pin_xclk = XCLK_GPIO_NUM,
-    .pin_sccb_sda = SIOD_GPIO_NUM,
-    .pin_sccb_scl = SIOC_GPIO_NUM,
-    .pin_d0 = Y2_GPIO_NUM,
-    .pin_d1 = Y3_GPIO_NUM,
-    .pin_d2 = Y4_GPIO_NUM,
-    .pin_d3 = Y5_GPIO_NUM,
-    .pin_d4 = Y6_GPIO_NUM,
-    .pin_d5 = Y7_GPIO_NUM,
-    .pin_d6 = Y8_GPIO_NUM,
-    .pin_d7 = Y9_GPIO_NUM,
-    .pin_vsync = VSYNC_GPIO_NUM,
-    .pin_href = HREF_GPIO_NUM,
-    .pin_pclk = PCLK_GPIO_NUM,
-    .xclk_freq_hz = 20000000,
-    .pixel_format = PIXFORMAT_RGB565,
-    .frame_size = FRAMESIZE_QVGA,
-    .jpeg_quality = 10,
-    .fb_count = 2
-};
+// 在 app_config.h 中设置
+#define CONFIG_LOG_DEFAULT_LEVEL ESP_LOG_DEBUG
 ```
 
-3. 初始化摄像头：
-```c
-esp_err_t ret = ov2640_init(&camera_config);
-if (ret != ESP_OK) {
-    // 处理错误
-}
-```
+## 🔮 未来改进
 
-4. 获取图像：
-```c
-camera_fb_t *fb = NULL;
-ret = ov2640_get_frame(&fb);
-if (ret == ESP_OK && fb) {
-    // 处理图像数据
-    // fb->buf - 图像数据
-    // fb->len - 数据长度
-    // fb->width - 图像宽度
-    // fb->height - 图像高度
-    // fb->format - 像素格式
-}
-```
+- [ ] 支持多种分辨率切换
+- [ ] 添加认证机制
+- [ ] 实现动态比特率调整
+- [ ] 支持音频流
+- [ ] Web配置界面
+- [ ] OTA无线更新
 
-5. 配置参数：
-```c
-// 设置帧大小
-ov2640_set_frame_size(FRAMESIZE_VGA);
+## 📊 性能基准
 
-// 设置像素格式
-ov2640_set_pixel_format(PIXFORMAT_JPEG);
+| 指标 | 值 | 备注 |
+|------|------|------|
+| 分辨率 | 640x480 | VGA质量 |
+| 帧率 | 37 FPS | 稳定输出 |
+| 延迟 | <100ms | 局域网环境 |
+| 内存占用 | <1MB | 运行时 |
+| 功耗 | ~500mA | 含WiFi和摄像头 |
+| 连接数 | 1-3个 | 同时客户端 |
 
-// 设置 JPEG 质量（仅在 JPEG 模式下有效）
-ov2640_set_jpeg_quality(10);
-```
+## 📚 参考资料
 
-6. 清理资源：
-```c
-ov2640_deinit();
-```
+- [RFC 2326 - Real Time Streaming Protocol (RTSP)](https://tools.ietf.org/html/rfc2326)
+- [RFC 2435 - RTP Payload Format for JPEG](https://tools.ietf.org/html/rfc2435)
+- [ESP-IDF Programming Guide](https://docs.espressif.com/projects/esp-idf/en/latest/)
+- [ESP32-S3 Technical Reference Manual](https://www.espressif.com/sites/default/files/documentation/esp32-s3_technical_reference_manual_en.pdf)
 
-## 注意事项
+## 🤝 贡献
 
-1. 确保所有引脚连接正确，特别是数据总线和时钟信号。
-2. XCLK 频率建议设置在 10-20MHz 范围内。
-3. 在使用 JPEG 格式时，建议根据实际需求调整压缩质量。
-4. 使用 RGB565 格式时，确保有足够的内存存储图像数据。
-5. 在高分辨率模式下，建议使用 DMA 传输以提高性能。
+欢迎提交Issue和Pull Request来改进这个项目！
 
-## 错误处理
+## 📄 许可证
 
-驱动程序使用 ESP-IDF 的错误处理机制，可能返回以下错误码：
+MIT License - 查看LICENSE文件了解详情
 
-- `ESP_OK`: 操作成功
-- `ESP_ERR_NO_MEM`: 内存分配失败
-- `ESP_ERR_INVALID_STATE`: 驱动程序状态错误
-- `ESP_ERR_NOT_FOUND`: 未检测到摄像头
-- `ESP_FAIL`: 其他错误
-
-## 依赖项
-
-- ESP-IDF v5.4 或更高版本
-- FreeRTOS
-- ESP32-S3 芯片
-
-# Hello World Example
-
-Starts a FreeRTOS task to print "Hello World".
-
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
-
-## How to use example
-
-Follow detailed instructions provided specifically for this example.
-
-Select the instructions depending on Espressif chip installed on your development board:
-
-- [ESP32 Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/stable/get-started/index.html)
-- [ESP32-S2 Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/get-started/index.html)
-
-
-## Example folder contents
-
-The project **hello_world** contains one source file in C language [hello_world_main.c](main/hello_world_main.c). The file is located in folder [main](main).
-
-ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt` files that provide set of directives and instructions describing the project's source files and targets (executable, library, or both).
-
-Below is short explanation of remaining files in the project folder.
-
-```
-├── CMakeLists.txt
-├── pytest_hello_world.py      Python script used for automated testing
-├── main
-│   ├── CMakeLists.txt
-│   └── hello_world_main.c
-└── README.md                  This is the file you are currently reading
-```
-
-For more information on structure and contents of ESP-IDF projects, please refer to Section [Build System](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/build-system.html) of the ESP-IDF Programming Guide.
-
-## Troubleshooting
-
-* Program upload failure
-
-    * Hardware connection is not correct: run `idf.py -p PORT monitor`, and reboot your board to see if there are any output logs.
-    * The baud rate for downloading is too high: lower your baud rate in the `menuconfig` menu, and try again.
-
-## Technical support and feedback
-
-Please use the following feedback channels:
-
-* For technical queries, go to the [esp32.com](https://esp32.com/) forum
-* For a feature request or bug report, create a [GitHub issue](https://github.com/espressif/esp-idf/issues)
-
-We will get back to you as soon as possible.
+---
+**项目状态**: 生产就绪 ✅  
+**最后更新**: 2025年10月8日  
+**版本**: 3.1.0

@@ -1,0 +1,6 @@
+dependencies:
+  # 添加espressif的H.264编码器库
+  esp32-camera: ">=2.0.0"
+  esp-dsp: ">=1.2.0"
+  idf:
+    version: ">=5.0.0"
