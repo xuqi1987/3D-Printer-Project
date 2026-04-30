@@ -27,8 +27,10 @@ class StepperPico {
     // 获取当前步序号
     int getCurrentStep();
     
-  private:
+    // 直接控制步序（用于Sangaboard兼容性）
     void stepMotor(int step_sequence);
+    
+  private:
     
     int motor_pins[4];           // 电机控制引脚
     int current_step;            // 当前步序号 (0-7)

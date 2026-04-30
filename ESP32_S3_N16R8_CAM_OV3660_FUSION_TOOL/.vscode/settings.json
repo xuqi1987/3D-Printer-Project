@@ -1,0 +1,19 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "idf.openOcdConfigs": [
+    "board/esp32s3-builtin.cfg"
+  ],
+  "idf.port": "/dev/tty.usbserial-110",
+  "idf.currentSetup": "/Users/xuqi/esp/v5.4.2/esp-idf",
+  "idf.customExtraVars": {
+    "ADF_PATH": "/home/xuqi/.espressif",
+    "IDF_TARGET": "esp32s3"
+  },
+  "clangd.path": "/Users/xuqi/.espressif/tools/esp-clang/esp-18.1.2_20240912/esp-clang/bin/clangd",
+  "clangd.arguments": [
+    "--background-index",
+    "--query-driver=**",
+    "--compile-commands-dir=/Users/xuqi/Proj/3D-Printer-Project/ESP32_S3_N16R8_CAM_OV3660_FUSION_TOOL/build"
+  ],
+  "idf.flashType": "UART"
+}
