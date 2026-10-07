@@ -81,37 +81,49 @@ WeMos D1 Mini                LR7843 模块（PWM 侧）
 
 ## 编译与烧录
 
-> 需要 ESP-IDF（v4.4 或兼容版本，含 ESP8266 RTOS SDK）。
-> 当前仓库其他 WeMosD1 项目主要用 PlatformIO+Arduino，本项目用 ESP-IDF。
+> 使用 **PlatformIO + Arduino 框架**，与仓库其他 WeMosD1 项目一致。
+
+### 1. 配置 WiFi
+
+编辑 `platformio.ini`，把 `WIFI_SSID` 和 `WIFI_PASSWORD` 改成你自己的：
+
+```ini
+-D WIFI_SSID="你的WiFi名"
+-D WIFI_PASSWORD="你的WiFi密码"
+```
+
+或者更安全的做法：通过环境变量传入，避免把密码提交到 git：
+
+```bash
+export PLATFORMIO_BUILD_FLAGS="-DWIFI_SSID=\\\"MyWiFi\\\" -DWIFI_PASSWORD=\\\"MyPass\\\""
+```
+
+### 2. 编译
 
 ```bash
 cd WeMosD1_PC_PowerCtrl
-
-# 激活 ESP-IDF 环境
-source $HOME/esp/ESP8266_RTOS_SDK/export.sh
-
-# 设置目标芯片
-idf.py set-target esp8266
-
-# 配置 WiFi SSID / 密码（也可直接编辑 sdkconfig.defaults）
-idf.py menuconfig
-#   -> "PC Power Control Configuration"
-#       -> WiFi SSID
-#       -> WiFi Password
-#       -> Power Control GPIO (默认 GPIO5)
-#       -> Short / Long Press Duration
-
-# 编译
-idf.py build
-
-# 烧录（将 /dev/cu.usbserial-XXX 替换成实际串口）
-idf.py -p /dev/cu.usbserial-XXX flash
-
-# 查看日志
-idf.py -p /dev/cu.usbserial-XXX monitor
+pio run
 ```
 
-烧录后第一次启动会自动连接配置的 WiFi；连上后串口日志会打印 `IP`，用浏览器访问该 IP 即可看到 Web UI。
+### 3. 烧录
+
+```bash
+# 自动检测串口
+pio run -t upload
+
+# 或指定串口（将 /dev/cu.usbserial-XXX 替换成实际串口）
+pio run -t upload --upload-port /dev/cu.usbserial-210
+```
+
+### 4. 查看日志
+
+```bash
+pio device monitor
+# 或指定串口和波特率
+pio device monitor -p /dev/cu.usbserial-210 -b 115200
+```
+
+烧录后第一次启动会自动连接配置的 WiFi；连上后串口日志会打印 `IP`，用浏览器访问 `http://<IP>/` 或 `http://pc-power.local/` 即可看到 Web UI。
 
 ---
 

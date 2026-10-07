@@ -7,7 +7,5 @@
 */.DS_Store
 .DS_Store
 
-# ESP-IDF build artifacts (created by `idf.py build`)
-WeMosD1_PC_PowerCtrl/build/
-WeMosD1_PC_PowerCtrl/sdkconfig
-WeMosD1_PC_PowerCtrl/sdkconfig.old
+# PlatformIO build artifacts (already covered by .pio above)
+# WeMosD1_PC_PowerCtrl uses standard .pio/ ignore
