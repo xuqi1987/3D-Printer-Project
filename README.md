@@ -16,7 +16,7 @@
 | ⌨️ 键盘 / 输入 | [QBoard](#qboard) · [KeyBoard_BLE](#keyboard_ble) |
 | 🚢 遥控小船 | [QBoat](#qboat) |
 | 🔖 NFC | [WeMosD1_PN532_NFC_Reader](#wemosd1_pn532_nfc_reader) |
-| 🔒 门禁 / 自动锁 | [AutoLockPC](#autolockpc) · [ESPCam-BL-AutoLock](#espcam-bl-autolock) |
+| 🔒 门禁 / 自动锁 | [AutoLockPC](#autolockpc) · [ESPCam-BL-AutoLock](#espcam-bl-autolock) · [WeMosD1_PC_PowerCtrl](#wemosd1_pc_powerctrl) |
 | 💡 灯具 | [Night_Lamp](#night_lamp) · [WeMosD1_Lamp](#wemosd1_lamp) |
 | ⚠️ 失败 / 存档 | [HomeKit_ESP01_DHT22_Failed](#homekit_esp01_dht22_failed) · [Pico_lvgl_st7789_failed](#pico_lvgl_st7789_failed) · [ESP32_S3_N16R8_CAM_OV3660_FUSION_TOOL](#esp32_s3_n16r8_cam_ov3660_fusion_tool) |
 
@@ -265,6 +265,21 @@ doc/           # 文档
 **硬件**：ESP8266/ESP32  
 **功能**：自动锁定 PC 的控制器（开发中，主程序待实现）。  
 **状态**：骨架项目，`src/main.cpp` 为空
+
+---
+
+### WeMosD1_PC_PowerCtrl
+
+**硬件**：WeMos D1 Mini (ESP8266) + LR7843 光耦隔离 MOS 模块  
+**功能**：通过局域网 HTTP 接口远程控制 PC 主机的电源（模拟物理电源键的短按 / 长按）。  
+**特性**：
+- ESP-IDF v4.4 原生固件（仓库内首个 WeMosD1 ESP-IDF 项目）
+- Web 控制页面（手机/电脑浏览器访问）
+- RESTful JSON API，便于接入 Home Assistant
+- 板载 LED 状态指示（WiFi 未连/已连/动作触发）
+- 短按 300ms 开机 / 唤醒，长按 5s 强制断电
+
+**参考文档**：[WeMosD1_PC_PowerCtrl/README.md](WeMosD1_PC_PowerCtrl/README.md)
 
 ---
 

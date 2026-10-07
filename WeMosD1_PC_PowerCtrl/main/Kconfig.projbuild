@@ -1,0 +1,46 @@
+menu "PC Power Control Configuration"
+
+    config WIFI_SSID
+        string "WiFi SSID"
+        default "MyWiFi"
+        help
+            SSID of the WiFi network the ESP8266 will connect to.
+
+    config WIFI_PASSWORD
+        string "WiFi Password"
+        default "MyPassword"
+        help
+            Password of the WiFi network.
+
+    config POWER_GPIO
+        int "Power Control GPIO (D1 = GPIO5)"
+        range 0 16
+        default 5
+        help
+            GPIO pin connected to the MOSFET/relay module's PWM/IN pin.
+            WeMos D1 mini: D1 = GPIO5
+
+    config STATUS_LED_GPIO
+        int "Status LED GPIO"
+        range 0 16
+        default 2
+        help
+            GPIO pin for status LED. On WeMos D1 mini the on-board LED is on GPIO2.
+
+    config SHORT_PRESS_MS
+        int "Short Press Duration (ms)"
+        range 50 1000
+        default 300
+        help
+            Duration of short press to power on / wake from sleep.
+            Typical motherboard power button requires ~100-500ms.
+
+    config LONG_PRESS_MS
+        int "Long Press Duration (ms)"
+        range 1000 10000
+        default 5000
+        help
+            Duration of long press to force power off.
+            Most motherboards force shutdown when held > 4 seconds.
+
+endmenu

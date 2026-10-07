@@ -1,0 +1,8 @@
+# ESP8266 专用 sdkconfig 项
+# 参考 https://github.com/espressif/ESP8266_RTOS_SDK
+
+# 降低日志等级减少串口输出开销
+CONFIG_LOG_DEFAULT_LEVEL_INFO=y
+
+# 使用静态 IP（可选，注释掉则用 DHCP）
+# CONFIG_WIFI_USE_STATIC_IP=y
