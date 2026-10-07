@@ -7,6 +7,11 @@
  *   - GET /power?action=long   → 长按电源键（5s，强制断电）
  *   - GET /status      → JSON: {"wifi":true,"ip":"..."}
  *
+ * 配网：
+ *   - 首次上电（或长按 FLASH 按钮重启）→ 创建 "PC-Power-Setup" 热点
+ *   - 手机/电脑连上热点 → 浏览器自动弹出配网页（192.168.4.1）
+ *   - 输入家庭 WiFi SSID + 密码 → 保存到 flash → 自动连接
+ *
  * 硬件接线：
  *   - D1 (GPIO5) → LR7843 MOS 模块 PWM 端
  *   - GND        → LR7843 GND
@@ -18,29 +23,29 @@
 #include <ESP8266WebServer.h>
 #include <ESP8266mDNS.h>
 #include <Ticker.h>
+#include <WiFiManager.h>
 
 // ============== User Configuration ==============
-#ifndef WIFI_SSID
-  #define WIFI_SSID       "MyWiFi"
-#endif
-#ifndef WIFI_PASSWORD
-  #define WIFI_PASSWORD   "MyPassword"
-#endif
-
 #define HOSTNAME         "pc-power"
-#define POWER_GPIO       D1        // WeMos D1: D1 = GPIO5
-#define STATUS_LED_GPIO  LED_BUILTIN  // WeMos D1: on-board LED = GPIO2
+#define AP_NAME          "PC-Power-Setup"   // 配网热点名
+#define POWER_GPIO       D1                 // WeMos D1: D1 = GPIO5
+#define STATUS_LED_GPIO  LED_BUILTIN        // WeMos D1: on-board LED = GPIO2
 
 #ifndef SHORT_PRESS_MS
-  #define SHORT_PRESS_MS  300      // 短按：开机/唤醒
+  #define SHORT_PRESS_MS  300               // 短按：开机/唤醒
 #endif
 #ifndef LONG_PRESS_MS
-  #define LONG_PRESS_MS   5000     // 长按：>4s 多数主板强制关机
+  #define LONG_PRESS_MS   5000              // 长按：>4s 多数主板强制关机
 #endif
+
+// FLASH 按钮（D3 = GPIO0）按住 > 3 秒重启进入配网模式
+#define RESET_BUTTON_GPIO  D3               // WeMos D1 的 FLASH 按钮
+#define RESET_HOLD_MS      3000
 // ================================================
 
 ESP8266WebServer server(80);
 Ticker ledTicker;
+WiFiManager wifiManager;
 
 static volatile bool s_wifiConnected = false;
 
@@ -122,7 +127,7 @@ static void handleStatus()
 
 /**
  * Status LED:
- *   - blink 1Hz  = WiFi not connected
+ *   - blink 1Hz  = WiFi not connected (or in config portal)
  *   - solid ON   = WiFi connected
  */
 static void statusLedTick()
@@ -146,7 +151,16 @@ static void onWifiConnected(const WiFiEventStationModeGotIP &)
 static void onWifiDisconnected(const WiFiEventStationModeDisconnected &)
 {
     s_wifiConnected = false;
-    Serial.println("[WIFI] disconnected, retrying...");
+    Serial.println("[WIFI] disconnected");
+}
+
+// ====== Config portal callback =============================================
+
+static void configModeCallback(WiFiManager *mgr)
+{
+    Serial.println("[WIFI] Entered config mode (AP mode)");
+    Serial.printf("[WIFI] AP SSID: %s\n", mgr->getConfigPortalSSID().c_str());
+    Serial.printf("[WIFI] AP IP:   %s\n", WiFi.softAPIP().toString().c_str());
 }
 
 // ====== Arduino setup/loop =================================================
@@ -165,13 +179,51 @@ void setup()
     pinMode(STATUS_LED_GPIO, OUTPUT);
     digitalWrite(STATUS_LED_GPIO, LOW);
 
+    // FLASH button (with internal pull-up)
+    pinMode(RESET_BUTTON_GPIO, INPUT_PULLUP);
+
     // WiFi events
     WiFi.onStationModeGotIP(onWifiConnected);
     WiFi.onStationModeDisconnected(onWifiDisconnected);
 
-    Serial.printf("[WIFI] connecting to %s ...\n", WIFI_SSID);
-    WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-    WiFi.setAutoReconnect(true);
+    // Status LED ticker
+    ledTicker.attach(0.5, statusLedTick);
+
+    // ----- WiFiManager config -----
+    wifiManager.setDebugOutput(true);
+    wifiManager.setAPCallback(configModeCallback);
+    wifiManager.setConfigPortalTimeout(180);   // 配网页 180s 超时
+    wifiManager.setConnectTimeout(15);        // 连接家庭 WiFi 15s 超时
+
+    // Detect FLASH button held at boot → reset saved credentials & enter config
+    bool forceConfig = false;
+    if (digitalRead(RESET_BUTTON_GPIO) == LOW) {
+        Serial.println("[BOOT] FLASH button pressed, waiting 3s to confirm reset...");
+        unsigned long start = millis();
+        while (digitalRead(RESET_BUTTON_GPIO) == LOW && millis() - start < RESET_HOLD_MS) {
+            delay(50);
+        }
+        if (digitalRead(RESET_BUTTON_GPIO) == LOW) {
+            Serial.println("[BOOT] Held > 3s, resetting WiFi settings");
+            wifiManager.resetSettings();
+            forceConfig = true;
+        } else {
+            Serial.println("[BOOT] Released early, keeping settings");
+        }
+    }
+
+    // First arg = AP name, second = AP password (NULL = open AP)
+    Serial.println("[WIFI] starting WiFiManager...");
+    if (!wifiManager.autoConnect(AP_NAME, NULL)) {
+        Serial.println("[WIFI] autoConnect failed/timed out, restarting...");
+        ESP.restart();
+    }
+
+    if (forceConfig) {
+        Serial.println("[WIFI] reset done, will restart in 3s");
+        delay(3000);
+        ESP.restart();
+    }
 
     // mDNS
     if (MDNS.begin(HOSTNAME)) {
@@ -185,9 +237,6 @@ void setup()
     server.on("/status",   HTTP_GET, handleStatus);
     server.begin();
     Serial.println("[HTTP] listening on port 80");
-
-    // Status LED ticker
-    ledTicker.attach(0.5, statusLedTick);
 }
 
 void loop()
